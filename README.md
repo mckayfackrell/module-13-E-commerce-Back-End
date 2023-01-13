@@ -7,7 +7,7 @@ An application called E-commerce Back End which allows for a user to create, upd
 
 
 ## Installation 
-The user should clone the repository from GitHub. This application requires MySQL2and Sequelize. 
+The user should clone the repository from GitHub. This application requires MySQL2 and Sequelize. 
 
 You’ll need to use the MySQL2 and Sequelize packages to connect your Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like your MySQL username, password, and database name.
 
