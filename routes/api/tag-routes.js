@@ -6,21 +6,18 @@ const { Tag, Product, ProductTag } = require("../../models");
 router.get("/", async (req, res) => {
   // find all tags
   // be sure to include its associated Product data
-  router.get("/", async (req, res) => {
-    try {
-      const tagData = await ProductTag.findAll({
-        include: [
-          {
-            model: Product,
-          },
-        ],
-      });
-      res.json(tagData);
-    } catch (err) {
-      console.error(err);
-      res.status(500).json({ message: "Error finding all tags" });
-    }
-  });
+  try {
+    const tagData = await Tag.findAll({
+      include: [
+        {
+          model: Product,
+        },
+      ],
+    });
+    res.status(200).json(tagData);
+  } catch (err) {
+    res.status(500).json({ message: "Error finding all tags" });
+  }
 });
 
 router.get("/:id", async (req, res) => {
@@ -57,16 +54,19 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   // update a tag's name by its `id` value
-    try {
-      const updatedTag = await Tag.update({ name: req.body.name }, {
+  try {
+    const updatedTag = await Tag.update(
+      { name: req.body.name },
+      {
         where: {
-          id: req.params.id
-        }
-      });
-      res.status(200).json({ message: "Tag updated successfully", updatedTag });
-    } catch (err) {
-      res.status(500).json({ message: "Error updating tag" });
-    }
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json({ message: "Tag updated successfully", updatedTag });
+  } catch (err) {
+    res.status(500).json({ message: "Error updating tag" });
+  }
 });
 
 router.delete("/:id", async (req, res) => {
