@@ -3,10 +3,12 @@
 
 An application called E-commerce Back End which allows for a user to create, update, and delete data in a database. 
 
-## Gifs
+## Gifs and Walkthrough Video
 | Terminal | Tags | Categories | Products |
 |---------|---------|---------|---------|
 | ![terminal](https://user-images.githubusercontent.com/110206514/212444468-eab41f39-e2c7-4360-bd6b-767e8184a95a.gif) | ![tags](https://user-images.githubusercontent.com/110206514/212444452-ef18c83f-6c59-45d7-b339-e8fe57e088ff.gif) | ![categories](https://user-images.githubusercontent.com/110206514/212444465-17c55552-888b-46c6-9054-58042cc1789a.gif) | ![products](https://user-images.githubusercontent.com/110206514/212444466-f5a34599-d2b8-44fd-be65-951615f52336.gif) |
+
+[Walkthrough Video](https://drive.google.com/file/d/1Q7Bl9DoTmGtaAv9mTjzDEIiN-sOHJAPM/view?usp=share_link)
 
 ## Installation 
 The user should clone the repository from GitHub. This application requires MySQL2 and Sequelize. 
